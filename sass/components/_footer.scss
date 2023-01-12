@@ -1,120 +1,134 @@
 .footer {
-  background-color: $hero-background-color;
-  padding: 60px 0;
-  text-align: left;
+    background-color: $hero-background-color;    
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @media screen and (min-width: 480px) {
+        width: 100%;
+    }
+    
+
+    &__adress{
+        min-width: 230px;;
+    }
+
+
 }
 
-.container--addres {
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  gap: 60px;
+.footer-tablet-desktop {
+    
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+       justify-content: space-between;
+       display: flex;
+        align-items: baseline;
+        padding-right: 74px;
+        padding-left: 71px;
+    }
 
-  @media screen and (min-width: 768px) {
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-  }
-
-  @media screen and (min-width: 1200px) {
-    text-align: left;
-    align-items: baseline;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+    @media screen and (min-width: 1200px){
+         display: flex;
+        align-items: baseline;
+    }
 }
 
-.footer__adress {
-  margin-right: 0;
+.info {
+    text-align: center;
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 70px;
-  }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+        text-align: left;
+    }
+
+    &__adress{
+        padding-left: 0px;
+        margin-bottom: 60px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+        }
+                        
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    
+   
+    &__item--style {
+        margin-top: 20px;
+        color: $main-body-color;
+        font-style: normal;
+        font-weight: $main-font-weight;
+        font-size: 14px;
+        line-height: 1.17em;
+        letter-spacing: 0.03em;
+    }
+
+    &__link:hover {
+        color: $main-theme-color;
+        
+    }
 }
 
-// .info {
-//   display: flex;
-//   align-items: baseline;
-
-.info__adress {
-  padding-left: 0px;
-}
-
-.info__item {
-  list-style-type: none;
-  padding-bottom: 9px;
-}
-
-// .info__item:not(:last-child) {
-//   margin-bottom: 8px;
-// }
-
-.info__item--style {
-  margin-top: 20px;
-  color: $main-body-color;
-  font-weight: $main-font-weight;
-  font-size: 14px;
-  line-height: 1.17em;
-  letter-spacing: 0.03em;
-  font-style: normal;
-}
-
-.info__link {
-  transition-timing-function: cubic-bezier(0.04, 0, 0.2, 1);
-  transition-duration: 250ms;
-  transition-property: color;
-}
-
-.info__link:hover {
-  color: $main-theme-color;
-}
-
-.icon {
-  &--bottom {
+.icon{
+    
+    &--bottom{
     display: inline-block;
-    margin-bottom: 20px;
-  }
+    margin-bottom:20px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-  &--below {
+    &--below{
     color: $main-body-color;
-  }
+}
 }
 
 .footersubadress {
-  color: $footer-contacts-color;
-  font-style: normal;
-  font-weight: $main-font-weight;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+    color: $footer-contacts-color;
+    font-style: normal;
+    font-weight: $main-font-weight;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
 }
 
-.footer-social {
-  margin-bottom: 20px;
+.footer-social{
+    margin-bottom: 60px;
 
-  &__caption {
-    color: $main-body-color;
-    font-weight: $bold-weight;
-    font-size: 14px;
-    line-height: 1.14em;
-    letter-spacing: 0.03;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
+
+    &__caption{
+        color: $main-body-color;
+        font-weight: $bold-weight;
+        font-size: 14px;
+        line-height: 1.14em;
+        letter-spacing: 0.03;
+        text-transform: uppercase;
+        margin:0;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+    }
+   
 }
 
 .socials--down {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  fill: $main-body-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    background-color: $main-theme-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     fill: $main-body-color;
-  }
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+
+    &:hover {
+        background-color: $main-theme-color;
+        fill: $main-body-color;
+    }
 }
+

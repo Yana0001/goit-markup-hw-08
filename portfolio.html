@@ -18,8 +18,8 @@
   </head>
 
   <body class="body">
-    <header>
-      <div class="container page-header">
+    <header class="page-header">
+      <div class="container">
         <a
           href="#"
           aria-label="link to webstudio page"
@@ -27,7 +27,7 @@
           >Web<span class="icon--above-color">Studio</span></a
         >
 
-        <nav>
+        <nav class="page-header__navigation">
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студія</a>
@@ -46,21 +46,73 @@
         <ul class="adress">
           <li class="adress__item">
             <a href="mailto:info@devstudio.com" class="adress__link">
-              <svg width="16px" height="12px" class="adress__svg">
+              <svg width="16px" height="12px" class="adress__svg not-shown">
                 <use href="./images/icons.svg#envelope-1"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
+
           <li class="adress__item">
             <a href="tel:+380961111111" class="adress__link">
-              <svg width="10" height="16" class="adress__svg">
+              <svg width="10" height="16" class="adress__svg not-shown">
                 <use href="./images/icons.svg#smartphone-1"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+
+        <div class="phone-menu is-closed" data-menu-container>
+          <button type="button" class="phone-menu__button" data-close-menu>
+            <svg width="19" height="19" class="phone-menu__icon">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+
+          <nav class="phone-menu__navigation">
+            <ul class="phone-menu__pages">
+              <li class="phone-menu__page">
+                <a href="./index.html" class="phone-menu__link">Студія</a>
+              </li>
+              <li class="phone-menu__page">
+                <a href="./portfolio.html" class="phone-menu__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="phone-menu__page">
+                <a href="" class="phone-menu__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="adress-mobile">
+            <li class="adress-mobile__item">
+              <a href="tel:+380961111111" class="adress-mobile__link">
+                +38 096 111 11 11
+              </a>
+            </li>
+
+            <li class="adress-mobile__item">
+              <a href="mailto:info@devstudio.com" class="adress-mobile__link">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="phone-menu__socials">
+            <li><a href="" class="phone-menu__ref">Instagram</a></li>
+            <li><a href="" class="phone-menu__ref">Twitter</a></li>
+            <li><a href="" class="phone-menu__ref">Facebook</a></li>
+            <li><a href="" class="phone-menu__ref">Linkedin</a></li>
+          </ul>
+        </div>
+
+        <button type="button" class="page-header__menu" data-open-menu>
+          <svg width="26" height="16">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -88,9 +140,8 @@
               <a href="#" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/screen_with_three_people.jpg"
+                    src="./images/project-1@1x.jpg"
                     alt="Web-site example"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -113,34 +164,8 @@
               <a href="#" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/poster.jpg"
+                    src="./images/project-2@1x.jpg"
                     alt="Poster's example"
-                    width="370"
-                    class="product__img"
-                  />
-                  <div class="overlay">
-                    <p class="overlay__text">
-                      Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
-                    </p>
-                  </div>
-                </div>
-                <div class="product__outline">
-                  <h2 class="product__caption">Технокряк</h2>
-                  <p class="product__decr">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="product">
-              <a href="" class="product__link">
-                <div class="product__box">
-                  <img
-                    src="./images/restaurant_label.png"
-                    alt="Reustrant's application label"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -156,6 +181,30 @@
                   <h2 class="product__caption">
                     Постер New Orlean vs Golden Star
                   </h2>
+                  <p class="product__decr">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="product">
+              <a href="" class="product__link">
+                <div class="product__box">
+                  <img
+                    src="./images/project-3@1x.jpg"
+                    alt="Reustrant's application label"
+                    class="product__img"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем
+                      функціоналу та сервісів. Все це дозволить відвідувачу
+                      отримати вичерпні відомості про компанію чи приватну
+                      особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="product__outline">
+                  <h2 class="product__caption">Ресторан Seafood</h2>
                   <p class="product__decr">Дизайн</p>
                 </div>
               </a>
@@ -165,9 +214,8 @@
               <a href="" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/headphones_marketing.png"
+                    src="./images/project-4@1x.jpg"
                     alt="Marketing project example"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -190,9 +238,8 @@
               <a href="" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/box_project.png"
+                    src="./images/project-5@1x.jpg"
                     alt="Boxes project label"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -215,9 +262,8 @@
               <a href="" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/screen.png"
+                    src="./images/project-6@1x.jpg"
                     alt="Web-site with name inspiration example"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -240,9 +286,8 @@
               <a href="" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/leaflet_design.png"
+                    src="./images/project-7@1x.jpg"
                     alt="Design project for publishing example"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -265,9 +310,9 @@
               <a href="" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/label_design.png"
+                    src="./images/project-8@1x.jpg"
                     alt="Marketing project label"
-                    width="370"
+                    class="product__img"
                   />
                   <div class="overlay">
                     <p class="overlay__text">
@@ -289,9 +334,8 @@
               <a href="" class="product__link">
                 <div class="product__box">
                   <img
-                    src="./images/busines_growing.png"
+                    src="./images/project-9@1x.jpg"
                     alt="Growing business application example"
-                    width="370"
                     class="product__img"
                   />
                   <div class="overlay">
@@ -426,5 +470,24 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-menu]"),
+        closeModalBtn: document.querySelector("[data-close-menu]"),
+        modal: document.querySelector("[data-menu-container]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+      refs.modal.addEventListener("click", testModal);
+      function testModal() {
+        console.log("click occured");
+      }
+
+      function toggleModal() {
+        refs.modal.classList.toggle("is-closed");
+      }
+    </script>
   </body>
 </html>
