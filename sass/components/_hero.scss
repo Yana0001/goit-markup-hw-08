@@ -1,14 +1,16 @@
-.section--hero {
+.hero {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 480px;
-  height: 400px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
     url(../../images/hero1x.jpg);
   background-color: $hero-background-color;
-  background-size: 480px 400px;
-  margin-left: auto;
-  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -17,12 +19,9 @@
       url(../../images/hero@2x.jpg);
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    height: 400px;
+  @media screen and (min-width: 480px) {
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
       url(../../images/hero768.jpg);
-    background-size: 768px 400px;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -36,12 +35,10 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     max-width: 1600px;
-    height: 600px;
     background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
       url(../../images/hero1200@1x.jpg);
-    background-size: 1600px 600px;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -54,19 +51,10 @@
         url(../../images/hero1200@2x.jpg);
     }
   }
-}
-
-.hero {
-  margin-top: 0;
-  text-align: center;
-  padding-top: 118px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
-    height: 600px;
   }
 
   &__heading {
@@ -75,6 +63,7 @@
     color: $main-body-color;
     font-style: normal;
     font-weight: $bold-caption;
+    max-width: 360px;
     font-size: 26px;
     line-height: 1.6em;
     letter-spacing: 0.06em;
@@ -86,7 +75,7 @@
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: 1.36em;
-      width: 696px;
+      max-width: 696px;
     }
   }
 

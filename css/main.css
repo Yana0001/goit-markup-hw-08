@@ -46,19 +46,25 @@ ul {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -89,14 +95,18 @@ ul {
 header {
   width: 100%;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #ECECEC;
 }
 
 .page-header {
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 30px;
-  padding-top: 30px;
 }
 .page-header .container {
   position: relative;
@@ -145,20 +155,12 @@ header {
 .site-nav .active {
   color: #2196F3;
 }
-@media screen and (min-width: 1600px) {
-  .site-nav .link {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
 .site-nav__link {
   color: #212121;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15em;
   letter-spacing: 0.02em;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 .site-nav__link:hover {
   color: #2196F3;
@@ -169,7 +171,7 @@ header {
 }
 .active::after {
   position: absolute;
-  top: 68px;
+  top: 0;
   left: 0;
   display: inline-block;
   content: "";
@@ -178,9 +180,14 @@ header {
   border-radius: 2px;
   background-color: #2196F3;
 }
+@media screen and (min-width: 768px) {
+  .active::after {
+    top: 44px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .active::after {
-    top: 74px;
+    top: 44px;
   }
 }
 
@@ -207,7 +214,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 50px;
+    gap: 30px;
   }
 }
 .adress .adress__link {
@@ -255,7 +262,6 @@ header {
   height: 100%;
   background-color: #FFFFFF;
   padding-top: 48px;
-  padding-left: 40px;
   padding-bottom: 48px;
   z-index: 10;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -337,11 +343,23 @@ header {
   font-size: 34px;
 }
 .adress-mobile__link {
-  color: #757575;
+  color: rgb(117, 117, 117);
 }
 .adress-mobile__link:hover {
   cursor: pointer;
   color: #2196F3;
+}
+
+.current-page {
+  color: #2196F3;
+}
+
+.mob {
+  color: #2196F3;
+}
+
+.font {
+  font-weight: 500;
 }
 
 .visually-hidden {
@@ -430,67 +448,55 @@ header {
   }
 }
 
-.section--hero {
+.hero {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 480px;
-  height: 400px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero1x.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero1x.jpg);
   background-color: #2F303A;
-  background-size: 480px 400px;
-  margin-left: auto;
-  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .section--hero {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
-  .section--hero {
-    max-width: 768px;
-    height: 400px;
+@media screen and (min-width: 480px) {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero768.jpg);
-    background-size: 768px 400px;
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .section--hero {
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero768@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero768@2x.jpg);
   }
 }
-@media screen and (min-width: 1200px) {
-  .section--hero {
+@media screen and (min-width: 768px) {
+  .hero {
     max-width: 1600px;
-    height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero1200@1x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero1200@1x.jpg);
-    background-size: 1600px 600px;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .section--hero {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero1200@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero1200@2x.jpg);
   }
-}
-
-.hero {
-  margin-top: 0;
-  text-align: center;
-  padding-top: 118px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    height: 600px;
   }
 }
 .hero__heading {
@@ -499,6 +505,7 @@ header {
   color: #FFFFFF;
   font-style: normal;
   font-weight: 900;
+  max-width: 360px;
   font-size: 26px;
   line-height: 1.6em;
   letter-spacing: 0.06em;
@@ -511,7 +518,7 @@ header {
   .hero__heading {
     font-size: 44px;
     line-height: 1.36em;
-    width: 696px;
+    max-width: 696px;
   }
 }
 .hero__button {
@@ -902,12 +909,12 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1189,9 +1196,9 @@ header {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 50px;
+  padding-top: 40px;
   padding-right: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-left: 40px;
 }
 @media screen and (min-width: 1200px) {
@@ -1277,6 +1284,7 @@ header {
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
+  text-align: left;
 }
 
 .input {
@@ -1316,8 +1324,10 @@ input:focus {
 }
 
 .comment {
+  display: block;
   resize: none;
   border: none;
+  height: 120px;
   border-radius: 4px;
   outline: 1px solid rgba(33, 33, 33, 0.2);
 }

@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body class="body">
@@ -71,7 +71,9 @@
           <nav class="phone-menu__navigation">
             <ul class="phone-menu__pages">
               <li class="phone-menu__page">
-                <a href="./index.html" class="phone-menu__link">Студія</a>
+                <a href="./index.html" class="phone-menu__link current-page"
+                  >Студія</a
+                >
               </li>
               <li class="phone-menu__page">
                 <a href="./portfolio.html" class="phone-menu__link"
@@ -86,7 +88,7 @@
 
           <ul class="adress-mobile">
             <li class="adress-mobile__item">
-              <a href="tel:+380961111111" class="adress-mobile__link">
+              <a href="tel:+380961111111" class="adress-mobile__link mob">
                 +38 096 111 11 11
               </a>
             </li>
@@ -98,7 +100,7 @@
             </li>
           </ul>
 
-          <ul class="phone-menu__socials">
+          <ul class="phone-menu__socials font">
             <li><a href="" class="phone-menu__ref">Instagram</a></li>
             <li><a href="" class="phone-menu__ref">Twitter</a></li>
             <li><a href="" class="phone-menu__ref">Facebook</a></li>
@@ -115,8 +117,8 @@
     </header>
 
     <main>
-      <section class="section section--hero">
-        <div class="container hero">
+      <section class="section hero">
+        <div class="container">
           <h1 class="hero__heading">Ефективні рішення для вашого бізнесу</h1>
           <button data-modal-open type="button" class="hero__button">
             Замовити послугу
@@ -167,8 +169,8 @@
                   class="comment"
                   name="comment"
                   id="comment"
-                  rows="9"
                   placeholder="Введіть текст"
+                  width="120"
                 ></textarea>
               </div>
 
@@ -432,7 +434,7 @@
                   "
                   type="image/jpg"
                 />
-                <
+
                 <source
                   media="(max-width: 767px)"
                   srcset="
@@ -582,7 +584,7 @@
                     class="socials__contact socials__icon"
                   >
                     <svg width="20" height="20">
-                      <use href="./images/icons.svg#facebook-"></use>
+                      <use href="./images/icons.svg#facebook-1"></use>
                     </svg>
                   </a>
                 </li>
