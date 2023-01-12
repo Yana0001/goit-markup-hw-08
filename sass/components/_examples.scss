@@ -41,3 +41,20 @@
     color: $main-body-color;
   }
 }
+
+.section--ex {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.section__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}

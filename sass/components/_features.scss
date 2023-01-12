@@ -1,53 +1,53 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 
-    &__heading {
-        margin-top:0;
-        margin-bottom:0;
-        text-align: center;
-        color: $main-font-color;
-        font-weight: $bold-weight;
-        font-size: 36px;
-        line-height: 1.16em;   
-        letter-spacing: 0.03em;
-    }
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: $main-font-color;
+    font-weight: $bold-weight;
+    font-size: 36px;
+    line-height: 1.16em;
+    letter-spacing: 0.03em;
+  }
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features {
+  @media screen and (min-width: 768px) {
     display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0px;
+    flex-wrap: wrap;
     gap: 30px;
+  }
 
-    &__pic{
-        width: 70px;
-        height: 70px;    
-    }
+  &__pic {
+    width: 70px;
+    height: 70px;
+  }
 
-    &__background {
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        min-width: 270px;
-        min-height: 120px;
-        background-color: $filter-button-bckground;
-        border-radius: 4px;        
-    }
+  &__background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 270px;
+    min-height: 120px;
+    background-color: $filter-button-bckground;
+    border-radius: 4px;
+  }
 
-    &__caption {
+  &__caption {
     font-weight: $bold-weight;
     font-size: 14px;
     line-height: 1.15em;
@@ -55,15 +55,29 @@
     text-transform: uppercase;
     margin: 0;
     margin-top: 30px;
-    }
+  }
 
-    &__content { 
+  &__content {
     margin-top: 10px;
     margin-bottom: 0;
     color: $subfont-color;
     font-size: 14px;
     line-height: 1.7em;
     letter-spacing: 0.03em;
+  }
+}
+
+.features-item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
-   
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }

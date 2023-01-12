@@ -1,5 +1,15 @@
 .section--team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px;
   background-color: $filter-button-bckground;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team {
@@ -10,9 +20,20 @@
 
 .members {
   display: flex;
-  margin-top: 50px;
-  padding-left: 0;
+  padding: 0;
   gap: 30px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and(min-width:1200px) {
+  }
 }
 
 .member {

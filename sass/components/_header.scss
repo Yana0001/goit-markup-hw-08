@@ -1,41 +1,18 @@
-header {
-  width: 100%;
-  border-bottom: 1px solid $header-bottom-line;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-
-  @media screen and (min-width: 480px) {
-    max-width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
-  }
-}
-
 .page-header {
-  display: flex;
-  align-items: center;
+  border-bottom: 1px solid $header-bottom-line;
 
-  @media screen and (max-width: 480px) {
-    padding: 0 15px;
-    height: 60px;
+  & .container {
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
-  @media screen and (max-width: 768px) {
-    padding: 17px 0;
-  }
+  &__navigation {
+    display: none;
 
-  @media screen and (max-width: 1200px) {
-    padding: 24px 0 25px;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 }
 
@@ -48,11 +25,6 @@ header {
     color: $main-theme-color;
   }
 
-  .link {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
   &__link {
     color: $main-font-color;
     font-weight: $irregular-font-weight;
@@ -61,6 +33,7 @@ header {
     letter-spacing: 0.02em;
     padding-top: 30px;
     padding-bottom: 30px;
+    display: block;
 
     &:hover {
       color: $main-theme-color;
@@ -85,10 +58,16 @@ header {
 }
 
 .adress {
-  display: flex;
   margin-left: auto;
-  padding: 0;
-  gap: 50px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 50px;
+  }
 
   .adress__link {
     display: flex;
@@ -102,8 +81,11 @@ header {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: $subfont-color;
-    padding-top: 30px;
-    padding-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     &:hover,
     &:focus {
