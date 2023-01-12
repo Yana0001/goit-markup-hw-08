@@ -1,26 +1,27 @@
-.icon{
-    margin:0;    
-    font-family: 'Raleway';
-    font-weight: $bold-weight;
-    font-size: 26px;
-    line-height: 1.19em;
-    letter-spacing: 0.03em;
-    color: $main-theme-color;
+.icon {
+  margin: 0;
+  font-family: "Raleway";
+  font-weight: $bold-weight;
+  font-size: 26px;
+  line-height: 1.19em;
+  letter-spacing: 0.03em;
+  color: $main-theme-color;
 
-    &--top-space {
-        margin-right: 92px;
-    }
+  &--top-space {
+    margin-right: 92px;
+    
+  }
 
-    &--above-color {
-        color: $web-element-black;
-    }
+  &--above-color {
+    color: $web-element-black;
+  }
 
-    &--bottom{
-        display: inline-block;
-        margin-bottom:20px;
-    }
+  &--bottom {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
 
-    &--below{
-        color: $main-body-color;
-    }
+  &--below {
+    color: $main-body-color;
+  }
 }
